@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>
+        <img src="https://static.wikia.nocookie.net/pokemon-fano/images/6/6f/Poke_Ball.png" 
+        alt="Realistic Poké Ball" class="pokeball"> 
+        Pokémon Image Gallery
+    </h1>
+    <button id="load-btn">Load Random Pokémon</button>
+    <button id="clear-btn">Clear Gallery</button>
+    <div class="gallery" id="gallery"></div>
+    <div id="lightbox" class="lightbox" style="display: none;">
+        <div class="lightbox-content">
+            <span class="close">&times;</span>
+            <div class="lightbox-card">
+                <img id="lightbox-image" src="" alt="">
+                <p id="lightbox-name"></p>
+                <p id="lightbox-info"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

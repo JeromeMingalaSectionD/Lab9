@@ -1,0 +1,189 @@
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Pokemon Solid', sans-serif; 
+    color: #ffcc00; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 20px;
+    font-size: 36px; 
+}
+
+.pokeball {
+    width: 60px; 
+    margin-right: 10px;
+    animation: bounce 1s infinite; 
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #3b0a45;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #3b0a45;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    background-color: #fcebc1; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery p {
+    color: #3b0a45;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    text-align: center;
+}
+
+.lightbox-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+}
+
+.lightbox img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .lightbox-card {
+        padding: 15px;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .lightbox-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lightbox-card {
+        padding: 10px;
+    }
+
+    .close {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .gallery-item {
+        max-width: 150px;
+    }
+
+    .gallery img {
+        width: 120px; 
+        height: 120px; 
+    }
+}
